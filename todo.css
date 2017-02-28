@@ -4,7 +4,7 @@ body{
 	
 }
 #container{
-	width: 25%;
+	width: 20%;
 	box-shadow: 2px 2px 2px black;
 	border-radius: 5px;
 	margin: 0 auto;
@@ -13,6 +13,7 @@ body{
 	background: white;
 	height: auto;
 }
+
 .strike{
 	text-decoration: line-through;
 
@@ -33,7 +34,7 @@ body{
 	color: #2E4372;
 	font-size: 1.3em;
 }
-#remove{
+.remove{
 	float: right;
 	color: red;
 	background: white;
@@ -41,6 +42,9 @@ body{
 	outline: none;
 	display: none;
 	padding-right: 10px;
+}
+.vis_rem{
+	display: inline-block;
 }
 li{
 	list-style: none;
@@ -50,9 +54,18 @@ li{
 }
 ul{
 	padding: 0;
+	padding-right: 5px;
 }
 input{
 	border: none;
 	outline: none;
+	border-radius: 3px;
+	height: 30px; 
+	font-size: 1.2em;
+	width: 100%;
+	padding-left: 3px;
 	background: #E3E3E3;
+}
+#default{
+	display: none;
 }
