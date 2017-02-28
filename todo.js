@@ -37,6 +37,10 @@ $("#add").on("click",function(){
 							
 							//var idd = this;
 							//console.log(idd);
+
+							if(i%2==0)
+								$(this).css("background", "#E3E3E3");
+
 							$("#container").on('mouseenter', 'li', function() {
     								//do something
     								$(this).find("button").addClass("vis_rem");

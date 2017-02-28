@@ -29,7 +29,7 @@ function loadData(){
 		console.log(snap.val());
 		var tst = snap.val();
 		var li  = document.createElement('li');
-		li.innerHTML = "<span class=\"content\"> "+ tst["name"] +"</span>  <button class=\"remove\">X</button>";
+		li.innerHTML = "<span class=\"content\"> "+ tst["name"] +"</span>  <button class=\"remove\"><i class=\"fa fa-trash\" aria-hidden=\"true\"></i></button>";
 		//li.className = "content";
 		li.id = snap.key;
 		//console.log(tst["task1"]);
