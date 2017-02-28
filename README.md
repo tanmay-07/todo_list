@@ -8,3 +8,5 @@ Currently the app is single user, i.e. All the ToDos are added in a single list/
 
 Hover over a Todo to reveal the trash icon, Clicking the trash icon deletes the task. Both in the list and in the database.
 All the changes made in the database are instantly reflected in the real time.
+
+Check the project demo over here: https://tanmay-07.github.io/todo_list/
