@@ -1,6 +1,8 @@
-var database = firebase.database();
+
+
+var database = firebase.database(); //firebase database reference
 console.log(database);
-var dbref = database.ref().child("todos");
+var dbref = database.ref().child("todos"); //reference to root node
 
 
 
@@ -15,7 +17,7 @@ $("#add").on("click",function(){
 
 				var key1 = 10;
 					
-
+				//function to handle input from user and ssaving it into database
 				$("input").keypress(function (event) {
 						if(event.which == 13){
 							var inp ="";
@@ -32,6 +34,8 @@ $("#add").on("click",function(){
 							});
 				}
 				});		
+
+				//function to toggle delete button on hovering iver an item
 				var lis = document.querySelectorAll("li");
 				for (var i = 0; i < lis.length; i++) {
 							
@@ -53,12 +57,14 @@ $("#add").on("click",function(){
 								/*
 
 						$(lis[i]).hover(function(){
-							$(this).find("button").toggle(".remove");
+							$(this).find("button").toggle(".remove");  ///this wont work when more elements are added
 							
 						});   
 							*/
 				}
 
+
+				//function for remove button. Deletes from the list as well as the database
 				$(document).on("click", '.remove', function(){
 						console.log(this);
 						$(this).parent().remove();
@@ -71,42 +77,4 @@ $("#add").on("click",function(){
 
 
 });
-
-setTimeout( function(){
-
-
-	
-
-}, 2000);
-						
-
-
-
-
-	//changeClr();
-/*
-		$(".content").on("click", function(){
-		$(this).toggleClass("strike");
-
-		var keyToBeCompleted = $(this).parent().get(0).id;
-		console.log(keyToBeCompleted);
-
-		
-		var taskref = dbref.child(keyToBeCompleted);
-		taskref.once('value', function(snapshot) {
-
-    		if( snapshot.val() === null ) {
-        		/* does not exist 
-    		} else {
-        		console.log(snapshot.val());
-        		taskref.update({"comlpleted": true});
-    		}
-
-});     
-
-
-		dbref.orderByChild('comlpleted').on('value',function(snap){
-			//console.log(snap.val());
-		})
-		
-	});    */
+			
